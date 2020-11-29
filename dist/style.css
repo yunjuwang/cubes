@@ -1,0 +1,1476 @@
+@import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap");
+html, body {
+  background-color: #333;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+}
+
+h1 {
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-family: "Major Mono Display";
+  font-size: 18vw;
+  background: -webkit-gradient(linear, left top, right top, color-stop(8%, #4644ff), color-stop(40%, #44ffa3), color-stop(60%, #fdff44), color-stop(90%, #ff449f));
+  background: linear-gradient(90deg, #4644ff 8%, #44ffa3 40%, #fdff44 60%, #ff449f 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  pointer-events: none;
+}
+
+.cube {
+  margin: 10px;
+  position: absolute;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.cube:hover {
+  cursor: pointer;
+}
+
+.eye, .mouth {
+  position: absolute;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+
+.eye {
+  width: 10%;
+}
+.eye.eyeR {
+  height: 10%;
+  top: 28%;
+  left: 28%;
+}
+.eye.eyeL {
+  height: 10%;
+  top: 28%;
+  right: 28%;
+}
+
+.mouth {
+  width: 48%;
+  height: 7%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  bottom: 30%;
+}
+
+.cube1 {
+  left: calc(-90px - 84% );
+  top: calc(93% - 78px );
+  width: 78px;
+  height: 78px;
+  background-color: #fff;
+  -webkit-transform: rotate(7deg);
+          transform: rotate(7deg);
+  -webkit-animation: ani 11s infinite;
+          animation: ani 11s infinite;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+.cube1 .eye, .cube1 .mouth {
+  background-color: #4644ff;
+}
+.cube1 .eye.eyeL {
+  height: 5%;
+  top: 30%;
+}
+.cube1 .mouth {
+  left: calc(50% + -18%);
+}
+.cube1:hover {
+  -webkit-transform: translate(4px, 8px) scale(0.6);
+          transform: translate(4px, 8px) scale(0.6);
+}
+
+.cube2 {
+  left: calc(-90px - 61% );
+  top: calc(23% - 37px );
+  width: 37px;
+  height: 37px;
+  background-color: #fff;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+  -webkit-animation: ani 18s infinite;
+          animation: ani 18s infinite;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+.cube2 .eye, .cube2 .mouth {
+  background-color: #4644ff;
+}
+.cube2 .mouth {
+  left: calc(50% + -1%);
+}
+.cube2:hover {
+  -webkit-transform: translate(-6px, 4px) scale(0.6);
+          transform: translate(-6px, 4px) scale(0.6);
+}
+
+.cube3 {
+  left: calc(-90px - 25% );
+  top: calc(1% - 44px );
+  width: 44px;
+  height: 44px;
+  background-color: #44ffa3;
+  -webkit-transform: rotate(3deg);
+          transform: rotate(3deg);
+  -webkit-animation: ani 19s infinite;
+          animation: ani 19s infinite;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+.cube3 .eye, .cube3 .mouth {
+  background-color: #4644ff;
+}
+.cube3 .eye.eyeR {
+  height: 5%;
+  top: 30%;
+}
+.cube3 .mouth {
+  left: calc(50% + -9%);
+}
+.cube3:hover {
+  -webkit-transform: translate(-1px, -6px) scale(0.6);
+          transform: translate(-1px, -6px) scale(0.6);
+}
+
+.cube4 {
+  left: calc(-90px - 100% );
+  top: calc(72% - 41px );
+  width: 41px;
+  height: 41px;
+  background-color: #4644ff;
+  -webkit-transform: rotate(19deg);
+          transform: rotate(19deg);
+  -webkit-animation: ani 18s infinite;
+          animation: ani 18s infinite;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+.cube4 .eye, .cube4 .mouth {
+  background-color: #fdff44;
+}
+.cube4 .mouth {
+  left: calc(50% + 6%);
+}
+.cube4:hover {
+  -webkit-transform: translate(9px, 0px) scale(0.6);
+          transform: translate(9px, 0px) scale(0.6);
+}
+
+.cube5 {
+  left: calc(-90px - 59% );
+  top: calc(68% - 51px );
+  width: 51px;
+  height: 51px;
+  background-color: #44ffa3;
+  -webkit-transform: rotate(-3deg);
+          transform: rotate(-3deg);
+  -webkit-animation: ani 15s infinite;
+          animation: ani 15s infinite;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+.cube5 .eye, .cube5 .mouth {
+  background-color: #4644ff;
+}
+.cube5 .mouth {
+  left: calc(50% + -3%);
+}
+.cube5:hover {
+  -webkit-transform: translate(9px, -9px) scale(0.6);
+          transform: translate(9px, -9px) scale(0.6);
+}
+
+.cube6 {
+  left: calc(-90px - 42% );
+  top: calc(14% - 66px );
+  width: 66px;
+  height: 66px;
+  background-color: #44ffa3;
+  -webkit-transform: rotate(-19deg);
+          transform: rotate(-19deg);
+  -webkit-animation: ani 15s infinite;
+          animation: ani 15s infinite;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+.cube6 .eye, .cube6 .mouth {
+  background-color: #4644ff;
+}
+.cube6 .eye.eyeL {
+  height: 5%;
+  top: 30%;
+}
+.cube6 .mouth {
+  left: calc(50% + 3%);
+}
+.cube6:hover {
+  -webkit-transform: translate(-1px, 6px) scale(0.6);
+          transform: translate(-1px, 6px) scale(0.6);
+}
+
+.cube7 {
+  left: calc(-90px - 28% );
+  top: calc(41% - 80px );
+  width: 80px;
+  height: 80px;
+  background-color: #fdff44;
+  -webkit-transform: rotate(-16deg);
+          transform: rotate(-16deg);
+  -webkit-animation: ani 12s infinite;
+          animation: ani 12s infinite;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+.cube7 .eye, .cube7 .mouth {
+  background-color: #4644ff;
+}
+.cube7 .eye.eyeL {
+  height: 5%;
+  top: 30%;
+}
+.cube7 .mouth {
+  left: calc(50% + 5%);
+}
+.cube7:hover {
+  -webkit-transform: translate(-8px, -6px) scale(0.6);
+          transform: translate(-8px, -6px) scale(0.6);
+}
+
+.cube8 {
+  left: calc(-90px - 10% );
+  top: calc(81% - 62px );
+  width: 62px;
+  height: 62px;
+  background-color: #fff;
+  -webkit-transform: rotate(-18deg);
+          transform: rotate(-18deg);
+  -webkit-animation: ani 14s infinite;
+          animation: ani 14s infinite;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+.cube8 .eye, .cube8 .mouth {
+  background-color: #4644ff;
+}
+.cube8 .eye.eyeR {
+  height: 5%;
+  top: 30%;
+}
+.cube8 .mouth {
+  left: calc(50% + -19%);
+}
+.cube8:hover {
+  -webkit-transform: translate(-7px, 0px) scale(0.6);
+          transform: translate(-7px, 0px) scale(0.6);
+}
+
+.cube9 {
+  left: calc(-90px - 80% );
+  top: calc(95% - 53px );
+  width: 53px;
+  height: 53px;
+  background-color: #44ffa3;
+  -webkit-transform: rotate(-18deg);
+          transform: rotate(-18deg);
+  -webkit-animation: ani 16s infinite;
+          animation: ani 16s infinite;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+.cube9 .eye, .cube9 .mouth {
+  background-color: #ff449f;
+}
+.cube9 .mouth {
+  left: calc(50% + 2%);
+}
+.cube9:hover {
+  -webkit-transform: translate(-5px, 2px) scale(0.6);
+          transform: translate(-5px, 2px) scale(0.6);
+}
+
+.cube10 {
+  left: calc(-90px - 49% );
+  top: calc(34% - 59px );
+  width: 59px;
+  height: 59px;
+  background-color: #fdff44;
+  -webkit-transform: rotate(11deg);
+          transform: rotate(11deg);
+  -webkit-animation: ani 20s infinite;
+          animation: ani 20s infinite;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+.cube10 .eye, .cube10 .mouth {
+  background-color: #ff449f;
+}
+.cube10 .mouth {
+  left: calc(50% + -16%);
+}
+.cube10:hover {
+  -webkit-transform: translate(8px, 9px) scale(0.6);
+          transform: translate(8px, 9px) scale(0.6);
+}
+
+.cube11 {
+  left: calc(-90px - 32% );
+  top: calc(54% - 60px );
+  width: 60px;
+  height: 60px;
+  background-color: #fdff44;
+  -webkit-transform: rotate(18deg);
+          transform: rotate(18deg);
+  -webkit-animation: ani 16s infinite;
+          animation: ani 16s infinite;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+.cube11 .eye, .cube11 .mouth {
+  background-color: #4644ff;
+}
+.cube11 .mouth {
+  left: calc(50% + -6%);
+}
+.cube11:hover {
+  -webkit-transform: translate(-2px, 7px) scale(0.6);
+          transform: translate(-2px, 7px) scale(0.6);
+}
+
+.cube12 {
+  left: calc(-90px - 57% );
+  top: calc(95% - 82px );
+  width: 82px;
+  height: 82px;
+  background-color: #fdff44;
+  -webkit-transform: rotate(-19deg);
+          transform: rotate(-19deg);
+  -webkit-animation: ani 15s infinite;
+          animation: ani 15s infinite;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+.cube12 .eye, .cube12 .mouth {
+  background-color: #ff449f;
+}
+.cube12 .eye.eyeR {
+  height: 5%;
+  top: 30%;
+}
+.cube12 .eye.eyeL {
+  height: 5%;
+  top: 30%;
+}
+.cube12 .mouth {
+  left: calc(50% + 2%);
+}
+.cube12:hover {
+  -webkit-transform: translate(0px, 7px) scale(0.6);
+          transform: translate(0px, 7px) scale(0.6);
+}
+
+.cube13 {
+  left: calc(-90px - 94% );
+  top: calc(69% - 27px );
+  width: 27px;
+  height: 27px;
+  background-color: #44ffa3;
+  -webkit-transform: rotate(8deg);
+          transform: rotate(8deg);
+  -webkit-animation: ani 16s infinite;
+          animation: ani 16s infinite;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+.cube13 .eye, .cube13 .mouth {
+  background-color: #4644ff;
+}
+.cube13 .mouth {
+  left: calc(50% + -16%);
+}
+.cube13:hover {
+  -webkit-transform: translate(2px, -5px) scale(0.6);
+          transform: translate(2px, -5px) scale(0.6);
+}
+
+.cube14 {
+  left: calc(-90px - 98% );
+  top: calc(6% - 68px );
+  width: 68px;
+  height: 68px;
+  background-color: #fdff44;
+  -webkit-transform: rotate(18deg);
+          transform: rotate(18deg);
+  -webkit-animation: ani 14s infinite;
+          animation: ani 14s infinite;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+.cube14 .eye, .cube14 .mouth {
+  background-color: #4644ff;
+}
+.cube14 .eye.eyeR {
+  height: 5%;
+  top: 30%;
+}
+.cube14 .eye.eyeL {
+  height: 5%;
+  top: 30%;
+}
+.cube14 .mouth {
+  left: calc(50% + 9%);
+}
+.cube14:hover {
+  -webkit-transform: translate(8px, 9px) scale(0.6);
+          transform: translate(8px, 9px) scale(0.6);
+}
+
+.cube15 {
+  left: calc(-90px - 69% );
+  top: calc(53% - 39px );
+  width: 39px;
+  height: 39px;
+  background-color: #fff;
+  -webkit-transform: rotate(9deg);
+          transform: rotate(9deg);
+  -webkit-animation: ani 19s infinite;
+          animation: ani 19s infinite;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+.cube15 .eye, .cube15 .mouth {
+  background-color: #ff449f;
+}
+.cube15 .eye.eyeL {
+  height: 5%;
+  top: 30%;
+}
+.cube15 .mouth {
+  left: calc(50% + 2%);
+}
+.cube15:hover {
+  -webkit-transform: translate(6px, 6px) scale(0.6);
+          transform: translate(6px, 6px) scale(0.6);
+}
+
+.cube16 {
+  left: calc(-90px - 79% );
+  top: calc(79% - 65px );
+  width: 65px;
+  height: 65px;
+  background-color: #fff;
+  -webkit-transform: rotate(-17deg);
+          transform: rotate(-17deg);
+  -webkit-animation: ani 18s infinite;
+          animation: ani 18s infinite;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+.cube16 .eye, .cube16 .mouth {
+  background-color: #ff449f;
+}
+.cube16 .eye.eyeL {
+  height: 5%;
+  top: 30%;
+}
+.cube16 .mouth {
+  left: calc(50% + -18%);
+}
+.cube16:hover {
+  -webkit-transform: translate(4px, 1px) scale(0.6);
+          transform: translate(4px, 1px) scale(0.6);
+}
+
+.cube17 {
+  left: calc(-90px - 94% );
+  top: calc(78% - 76px );
+  width: 76px;
+  height: 76px;
+  background-color: #fdff44;
+  -webkit-transform: rotate(12deg);
+          transform: rotate(12deg);
+  -webkit-animation: ani 20s infinite;
+          animation: ani 20s infinite;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+.cube17 .eye, .cube17 .mouth {
+  background-color: #4644ff;
+}
+.cube17 .eye.eyeR {
+  height: 5%;
+  top: 30%;
+}
+.cube17 .mouth {
+  left: calc(50% + -4%);
+}
+.cube17:hover {
+  -webkit-transform: translate(0px, 2px) scale(0.6);
+          transform: translate(0px, 2px) scale(0.6);
+}
+
+.cube18 {
+  left: calc(-90px - 87% );
+  top: calc(63% - 52px );
+  width: 52px;
+  height: 52px;
+  background-color: #ff449f;
+  -webkit-transform: rotate(2deg);
+          transform: rotate(2deg);
+  -webkit-animation: ani 14s infinite;
+          animation: ani 14s infinite;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+.cube18 .eye, .cube18 .mouth {
+  background-color: #4644ff;
+}
+.cube18 .eye.eyeR {
+  height: 5%;
+  top: 30%;
+}
+.cube18 .mouth {
+  left: calc(50% + -16%);
+}
+.cube18:hover {
+  -webkit-transform: translate(-5px, -4px) scale(0.6);
+          transform: translate(-5px, -4px) scale(0.6);
+}
+
+.cube19 {
+  left: calc(-90px - 23% );
+  top: calc(20% - 78px );
+  width: 78px;
+  height: 78px;
+  background-color: #44ffa3;
+  -webkit-transform: rotate(1deg);
+          transform: rotate(1deg);
+  -webkit-animation: ani 20s infinite;
+          animation: ani 20s infinite;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+.cube19 .eye, .cube19 .mouth {
+  background-color: #4644ff;
+}
+.cube19 .eye.eyeR {
+  height: 5%;
+  top: 30%;
+}
+.cube19 .eye.eyeL {
+  height: 5%;
+  top: 30%;
+}
+.cube19 .mouth {
+  left: calc(50% + 16%);
+}
+.cube19:hover {
+  -webkit-transform: translate(9px, 8px) scale(0.6);
+          transform: translate(9px, 8px) scale(0.6);
+}
+
+.cube20 {
+  left: calc(-90px - 62% );
+  top: calc(44% - 32px );
+  width: 32px;
+  height: 32px;
+  background-color: #44ffa3;
+  -webkit-transform: rotate(-8deg);
+          transform: rotate(-8deg);
+  -webkit-animation: ani 20s infinite;
+          animation: ani 20s infinite;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+.cube20 .eye, .cube20 .mouth {
+  background-color: #fdff44;
+}
+.cube20 .eye.eyeL {
+  height: 5%;
+  top: 30%;
+}
+.cube20 .mouth {
+  left: calc(50% + 20%);
+}
+.cube20:hover {
+  -webkit-transform: translate(-9px, -1px) scale(0.6);
+          transform: translate(-9px, -1px) scale(0.6);
+}
+
+.cube21 {
+  left: calc(-90px - 18% );
+  top: calc(72% - 77px );
+  width: 77px;
+  height: 77px;
+  background-color: #fdff44;
+  -webkit-transform: rotate(16deg);
+          transform: rotate(16deg);
+  -webkit-animation: ani 16s infinite;
+          animation: ani 16s infinite;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+.cube21 .eye, .cube21 .mouth {
+  background-color: #ff449f;
+}
+.cube21 .mouth {
+  left: calc(50% + -3%);
+}
+.cube21:hover {
+  -webkit-transform: translate(-6px, 4px) scale(0.6);
+          transform: translate(-6px, 4px) scale(0.6);
+}
+
+.cube22 {
+  left: calc(-90px - 56% );
+  top: calc(37% - 84px );
+  width: 84px;
+  height: 84px;
+  background-color: #44ffa3;
+  -webkit-transform: rotate(6deg);
+          transform: rotate(6deg);
+  -webkit-animation: ani 15s infinite;
+          animation: ani 15s infinite;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+.cube22 .eye, .cube22 .mouth {
+  background-color: #4644ff;
+}
+.cube22 .eye.eyeR {
+  height: 5%;
+  top: 30%;
+}
+.cube22 .eye.eyeL {
+  height: 5%;
+  top: 30%;
+}
+.cube22 .mouth {
+  left: calc(50% + 16%);
+}
+.cube22:hover {
+  -webkit-transform: translate(2px, -8px) scale(0.6);
+          transform: translate(2px, -8px) scale(0.6);
+}
+
+.cube23 {
+  left: calc(-90px - 63% );
+  top: calc(83% - 34px );
+  width: 34px;
+  height: 34px;
+  background-color: #fff;
+  -webkit-transform: rotate(3deg);
+          transform: rotate(3deg);
+  -webkit-animation: ani 17s infinite;
+          animation: ani 17s infinite;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+.cube23 .eye, .cube23 .mouth {
+  background-color: #4644ff;
+}
+.cube23 .eye.eyeL {
+  height: 5%;
+  top: 30%;
+}
+.cube23 .mouth {
+  left: calc(50% + 2%);
+}
+.cube23:hover {
+  -webkit-transform: translate(-1px, -6px) scale(0.6);
+          transform: translate(-1px, -6px) scale(0.6);
+}
+
+.cube24 {
+  left: calc(-90px - 48% );
+  top: calc(73% - 44px );
+  width: 44px;
+  height: 44px;
+  background-color: #fdff44;
+  -webkit-transform: rotate(-14deg);
+          transform: rotate(-14deg);
+  -webkit-animation: ani 18s infinite;
+          animation: ani 18s infinite;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+.cube24 .eye, .cube24 .mouth {
+  background-color: #4644ff;
+}
+.cube24 .mouth {
+  left: calc(50% + -10%);
+}
+.cube24:hover {
+  -webkit-transform: translate(-6px, 4px) scale(0.6);
+          transform: translate(-6px, 4px) scale(0.6);
+}
+
+.cube25 {
+  left: calc(-90px - 68% );
+  top: calc(69% - 71px );
+  width: 71px;
+  height: 71px;
+  background-color: #4644ff;
+  -webkit-transform: rotate(11deg);
+          transform: rotate(11deg);
+  -webkit-animation: ani 15s infinite;
+          animation: ani 15s infinite;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+.cube25 .eye, .cube25 .mouth {
+  background-color: #fff;
+}
+.cube25 .eye.eyeR {
+  height: 5%;
+  top: 30%;
+}
+.cube25 .eye.eyeL {
+  height: 5%;
+  top: 30%;
+}
+.cube25 .mouth {
+  left: calc(50% + 9%);
+}
+.cube25:hover {
+  -webkit-transform: translate(10px, -3px) scale(0.6);
+          transform: translate(10px, -3px) scale(0.6);
+}
+
+.cube26 {
+  left: calc(-90px - 1% );
+  top: calc(15% - 56px );
+  width: 56px;
+  height: 56px;
+  background-color: #44ffa3;
+  -webkit-transform: rotate(6deg);
+          transform: rotate(6deg);
+  -webkit-animation: ani 11s infinite;
+          animation: ani 11s infinite;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+.cube26 .eye, .cube26 .mouth {
+  background-color: #4644ff;
+}
+.cube26 .eye.eyeR {
+  height: 5%;
+  top: 30%;
+}
+.cube26 .eye.eyeL {
+  height: 5%;
+  top: 30%;
+}
+.cube26 .mouth {
+  left: calc(50% + 2%);
+}
+.cube26:hover {
+  -webkit-transform: translate(8px, -2px) scale(0.6);
+          transform: translate(8px, -2px) scale(0.6);
+}
+
+.cube27 {
+  left: calc(-90px - 96% );
+  top: calc(4% - 49px );
+  width: 49px;
+  height: 49px;
+  background-color: #44ffa3;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+  -webkit-animation: ani 16s infinite;
+          animation: ani 16s infinite;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+.cube27 .eye, .cube27 .mouth {
+  background-color: #ff449f;
+}
+.cube27 .eye.eyeL {
+  height: 5%;
+  top: 30%;
+}
+.cube27 .mouth {
+  left: calc(50% + 19%);
+}
+.cube27:hover {
+  -webkit-transform: translate(-2px, 3px) scale(0.6);
+          transform: translate(-2px, 3px) scale(0.6);
+}
+
+.cube28 {
+  left: calc(-90px - 39% );
+  top: calc(30% - 35px );
+  width: 35px;
+  height: 35px;
+  background-color: #4644ff;
+  -webkit-transform: rotate(-1deg);
+          transform: rotate(-1deg);
+  -webkit-animation: ani 14s infinite;
+          animation: ani 14s infinite;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+.cube28 .eye, .cube28 .mouth {
+  background-color: #ff449f;
+}
+.cube28 .eye.eyeR {
+  height: 5%;
+  top: 30%;
+}
+.cube28 .mouth {
+  left: calc(50% + 4%);
+}
+.cube28:hover {
+  -webkit-transform: translate(-1px, 2px) scale(0.6);
+          transform: translate(-1px, 2px) scale(0.6);
+}
+
+.cube29 {
+  left: calc(-90px - 69% );
+  top: calc(27% - 77px );
+  width: 77px;
+  height: 77px;
+  background-color: #44ffa3;
+  -webkit-transform: rotate(-6deg);
+          transform: rotate(-6deg);
+  -webkit-animation: ani 12s infinite;
+          animation: ani 12s infinite;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+.cube29 .eye, .cube29 .mouth {
+  background-color: #fdff44;
+}
+.cube29 .eye.eyeR {
+  height: 5%;
+  top: 30%;
+}
+.cube29 .eye.eyeL {
+  height: 5%;
+  top: 30%;
+}
+.cube29 .mouth {
+  left: calc(50% + 1%);
+}
+.cube29:hover {
+  -webkit-transform: translate(-7px, 5px) scale(0.6);
+          transform: translate(-7px, 5px) scale(0.6);
+}
+
+.cube30 {
+  left: calc(-90px - 6% );
+  top: calc(26% - 30px );
+  width: 30px;
+  height: 30px;
+  background-color: #44ffa3;
+  -webkit-transform: rotate(-18deg);
+          transform: rotate(-18deg);
+  -webkit-animation: ani 16s infinite;
+          animation: ani 16s infinite;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+.cube30 .eye, .cube30 .mouth {
+  background-color: #4644ff;
+}
+.cube30 .eye.eyeR {
+  height: 5%;
+  top: 30%;
+}
+.cube30 .mouth {
+  left: calc(50% + 8%);
+}
+.cube30:hover {
+  -webkit-transform: translate(6px, 9px) scale(0.6);
+          transform: translate(6px, 9px) scale(0.6);
+}
+
+.cube31 {
+  left: calc(-90px - 50% );
+  top: calc(5% - 53px );
+  width: 53px;
+  height: 53px;
+  background-color: #44ffa3;
+  -webkit-transform: rotate(-19deg);
+          transform: rotate(-19deg);
+  -webkit-animation: ani 19s infinite;
+          animation: ani 19s infinite;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+.cube31 .eye, .cube31 .mouth {
+  background-color: #ff449f;
+}
+.cube31 .eye.eyeL {
+  height: 5%;
+  top: 30%;
+}
+.cube31 .mouth {
+  left: calc(50% + 16%);
+}
+.cube31:hover {
+  -webkit-transform: translate(9px, 8px) scale(0.6);
+          transform: translate(9px, 8px) scale(0.6);
+}
+
+.cube32 {
+  left: calc(-90px - 97% );
+  top: calc(7% - 28px );
+  width: 28px;
+  height: 28px;
+  background-color: #4644ff;
+  -webkit-transform: rotate(4deg);
+          transform: rotate(4deg);
+  -webkit-animation: ani 12s infinite;
+          animation: ani 12s infinite;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+.cube32 .eye, .cube32 .mouth {
+  background-color: #44ffa3;
+}
+.cube32 .eye.eyeL {
+  height: 5%;
+  top: 30%;
+}
+.cube32 .mouth {
+  left: calc(50% + -14%);
+}
+.cube32:hover {
+  -webkit-transform: translate(0px, -5px) scale(0.6);
+          transform: translate(0px, -5px) scale(0.6);
+}
+
+.cube33 {
+  left: calc(-90px - 47% );
+  top: calc(52% - 36px );
+  width: 36px;
+  height: 36px;
+  background-color: #ff449f;
+  -webkit-transform: rotate(17deg);
+          transform: rotate(17deg);
+  -webkit-animation: ani 19s infinite;
+          animation: ani 19s infinite;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+.cube33 .eye, .cube33 .mouth {
+  background-color: #4644ff;
+}
+.cube33 .eye.eyeR {
+  height: 5%;
+  top: 30%;
+}
+.cube33 .mouth {
+  left: calc(50% + -18%);
+}
+.cube33:hover {
+  -webkit-transform: translate(6px, 1px) scale(0.6);
+          transform: translate(6px, 1px) scale(0.6);
+}
+
+.cube34 {
+  left: calc(-90px - 78% );
+  top: calc(57% - 72px );
+  width: 72px;
+  height: 72px;
+  background-color: #44ffa3;
+  -webkit-transform: rotate(-13deg);
+          transform: rotate(-13deg);
+  -webkit-animation: ani 20s infinite;
+          animation: ani 20s infinite;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+.cube34 .eye, .cube34 .mouth {
+  background-color: #4644ff;
+}
+.cube34 .mouth {
+  left: calc(50% + 9%);
+}
+.cube34:hover {
+  -webkit-transform: translate(6px, -7px) scale(0.6);
+          transform: translate(6px, -7px) scale(0.6);
+}
+
+.cube35 {
+  left: calc(-90px - 49% );
+  top: calc(71% - 27px );
+  width: 27px;
+  height: 27px;
+  background-color: #ff449f;
+  -webkit-transform: rotate(-1deg);
+          transform: rotate(-1deg);
+  -webkit-animation: ani 16s infinite;
+          animation: ani 16s infinite;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+.cube35 .eye, .cube35 .mouth {
+  background-color: #4644ff;
+}
+.cube35 .eye.eyeL {
+  height: 5%;
+  top: 30%;
+}
+.cube35 .mouth {
+  left: calc(50% + 8%);
+}
+.cube35:hover {
+  -webkit-transform: translate(-1px, -2px) scale(0.6);
+          transform: translate(-1px, -2px) scale(0.6);
+}
+
+.cube36 {
+  left: calc(-90px - 43% );
+  top: calc(74% - 62px );
+  width: 62px;
+  height: 62px;
+  background-color: #fdff44;
+  -webkit-transform: rotate(1deg);
+          transform: rotate(1deg);
+  -webkit-animation: ani 18s infinite;
+          animation: ani 18s infinite;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+.cube36 .eye, .cube36 .mouth {
+  background-color: #ff449f;
+}
+.cube36 .mouth {
+  left: calc(50% + -15%);
+}
+.cube36:hover {
+  -webkit-transform: translate(0px, -4px) scale(0.6);
+          transform: translate(0px, -4px) scale(0.6);
+}
+
+.cube37 {
+  left: calc(-90px - 22% );
+  top: calc(63% - 73px );
+  width: 73px;
+  height: 73px;
+  background-color: #44ffa3;
+  -webkit-transform: rotate(19deg);
+          transform: rotate(19deg);
+  -webkit-animation: ani 16s infinite;
+          animation: ani 16s infinite;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+.cube37 .eye, .cube37 .mouth {
+  background-color: #44ffa3;
+}
+.cube37 .eye.eyeL {
+  height: 5%;
+  top: 30%;
+}
+.cube37 .mouth {
+  left: calc(50% + 13%);
+}
+.cube37:hover {
+  -webkit-transform: translate(3px, 5px) scale(0.6);
+          transform: translate(3px, 5px) scale(0.6);
+}
+
+.cube38 {
+  left: calc(-90px - 42% );
+  top: calc(59% - 31px );
+  width: 31px;
+  height: 31px;
+  background-color: #ff449f;
+  -webkit-transform: rotate(-19deg);
+          transform: rotate(-19deg);
+  -webkit-animation: ani 18s infinite;
+          animation: ani 18s infinite;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+.cube38 .eye, .cube38 .mouth {
+  background-color: #4644ff;
+}
+.cube38 .eye.eyeL {
+  height: 5%;
+  top: 30%;
+}
+.cube38 .mouth {
+  left: calc(50% + 17%);
+}
+.cube38:hover {
+  -webkit-transform: translate(9px, 7px) scale(0.6);
+          transform: translate(9px, 7px) scale(0.6);
+}
+
+.cube39 {
+  left: calc(-90px - 20% );
+  top: calc(77% - 59px );
+  width: 59px;
+  height: 59px;
+  background-color: #fdff44;
+  -webkit-transform: rotate(7deg);
+          transform: rotate(7deg);
+  -webkit-animation: ani 18s infinite;
+          animation: ani 18s infinite;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+.cube39 .eye, .cube39 .mouth {
+  background-color: #ff449f;
+}
+.cube39 .eye.eyeR {
+  height: 5%;
+  top: 30%;
+}
+.cube39 .mouth {
+  left: calc(50% + 12%);
+}
+.cube39:hover {
+  -webkit-transform: translate(7px, 2px) scale(0.6);
+          transform: translate(7px, 2px) scale(0.6);
+}
+
+.cube40 {
+  left: calc(-90px - 70% );
+  top: calc(91% - 83px );
+  width: 83px;
+  height: 83px;
+  background-color: #fdff44;
+  -webkit-transform: rotate(-10deg);
+          transform: rotate(-10deg);
+  -webkit-animation: ani 19s infinite;
+          animation: ani 19s infinite;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+.cube40 .eye, .cube40 .mouth {
+  background-color: #ff449f;
+}
+.cube40 .eye.eyeR {
+  height: 5%;
+  top: 30%;
+}
+.cube40 .eye.eyeL {
+  height: 5%;
+  top: 30%;
+}
+.cube40 .mouth {
+  left: calc(50% + 2%);
+}
+.cube40:hover {
+  -webkit-transform: translate(-1px, 8px) scale(0.6);
+          transform: translate(-1px, 8px) scale(0.6);
+}
+
+.cube41 {
+  left: calc(-90px - 82% );
+  top: calc(18% - 60px );
+  width: 60px;
+  height: 60px;
+  background-color: #4644ff;
+  -webkit-transform: rotate(4deg);
+          transform: rotate(4deg);
+  -webkit-animation: ani 16s infinite;
+          animation: ani 16s infinite;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+.cube41 .eye, .cube41 .mouth {
+  background-color: #fff;
+}
+.cube41 .mouth {
+  left: calc(50% + 18%);
+}
+.cube41:hover {
+  -webkit-transform: translate(-6px, 0px) scale(0.6);
+          transform: translate(-6px, 0px) scale(0.6);
+}
+
+.cube42 {
+  left: calc(-90px - 62% );
+  top: calc(47% - 44px );
+  width: 44px;
+  height: 44px;
+  background-color: #44ffa3;
+  -webkit-transform: rotate(-3deg);
+          transform: rotate(-3deg);
+  -webkit-animation: ani 20s infinite;
+          animation: ani 20s infinite;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+.cube42 .eye, .cube42 .mouth {
+  background-color: #fdff44;
+}
+.cube42 .eye.eyeR {
+  height: 5%;
+  top: 30%;
+}
+.cube42 .eye.eyeL {
+  height: 5%;
+  top: 30%;
+}
+.cube42 .mouth {
+  left: calc(50% + -1%);
+}
+.cube42:hover {
+  -webkit-transform: translate(-5px, 4px) scale(0.6);
+          transform: translate(-5px, 4px) scale(0.6);
+}
+
+.cube43 {
+  left: calc(-90px - 17% );
+  top: calc(16% - 32px );
+  width: 32px;
+  height: 32px;
+  background-color: #fdff44;
+  -webkit-transform: rotate(16deg);
+          transform: rotate(16deg);
+  -webkit-animation: ani 17s infinite;
+          animation: ani 17s infinite;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+.cube43 .eye, .cube43 .mouth {
+  background-color: #ff449f;
+}
+.cube43 .eye.eyeL {
+  height: 5%;
+  top: 30%;
+}
+.cube43 .mouth {
+  left: calc(50% + -8%);
+}
+.cube43:hover {
+  -webkit-transform: translate(-6px, 5px) scale(0.6);
+          transform: translate(-6px, 5px) scale(0.6);
+}
+
+.cube44 {
+  left: calc(-90px - 2% );
+  top: calc(62% - 71px );
+  width: 71px;
+  height: 71px;
+  background-color: #4644ff;
+  -webkit-transform: rotate(-1deg);
+          transform: rotate(-1deg);
+  -webkit-animation: ani 18s infinite;
+          animation: ani 18s infinite;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+.cube44 .eye, .cube44 .mouth {
+  background-color: #ff449f;
+}
+.cube44 .eye.eyeR {
+  height: 5%;
+  top: 30%;
+}
+.cube44 .eye.eyeL {
+  height: 5%;
+  top: 30%;
+}
+.cube44 .mouth {
+  left: calc(50% + 14%);
+}
+.cube44:hover {
+  -webkit-transform: translate(9px, 5px) scale(0.6);
+          transform: translate(9px, 5px) scale(0.6);
+}
+
+.cube45 {
+  left: calc(-90px - 59% );
+  top: calc(38% - 39px );
+  width: 39px;
+  height: 39px;
+  background-color: #44ffa3;
+  -webkit-transform: rotate(-4deg);
+          transform: rotate(-4deg);
+  -webkit-animation: ani 14s infinite;
+          animation: ani 14s infinite;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+.cube45 .eye, .cube45 .mouth {
+  background-color: #4644ff;
+}
+.cube45 .eye.eyeL {
+  height: 5%;
+  top: 30%;
+}
+.cube45 .mouth {
+  left: calc(50% + -18%);
+}
+.cube45:hover {
+  -webkit-transform: translate(2px, 9px) scale(0.6);
+          transform: translate(2px, 9px) scale(0.6);
+}
+
+.cube46 {
+  left: calc(-90px - 19% );
+  top: calc(82% - 62px );
+  width: 62px;
+  height: 62px;
+  background-color: #fff;
+  -webkit-transform: rotate(-10deg);
+          transform: rotate(-10deg);
+  -webkit-animation: ani 16s infinite;
+          animation: ani 16s infinite;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+.cube46 .eye, .cube46 .mouth {
+  background-color: #4644ff;
+}
+.cube46 .eye.eyeR {
+  height: 5%;
+  top: 30%;
+}
+.cube46 .mouth {
+  left: calc(50% + 14%);
+}
+.cube46:hover {
+  -webkit-transform: translate(-7px, -1px) scale(0.6);
+          transform: translate(-7px, -1px) scale(0.6);
+}
+
+.cube47 {
+  left: calc(-90px - 7% );
+  top: calc(62% - 64px );
+  width: 64px;
+  height: 64px;
+  background-color: #fff;
+  -webkit-transform: rotate(-10deg);
+          transform: rotate(-10deg);
+  -webkit-animation: ani 17s infinite;
+          animation: ani 17s infinite;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+.cube47 .eye, .cube47 .mouth {
+  background-color: #ff449f;
+}
+.cube47 .eye.eyeR {
+  height: 5%;
+  top: 30%;
+}
+.cube47 .eye.eyeL {
+  height: 5%;
+  top: 30%;
+}
+.cube47 .mouth {
+  left: calc(50% + -3%);
+}
+.cube47:hover {
+  -webkit-transform: translate(8px, 1px) scale(0.6);
+          transform: translate(8px, 1px) scale(0.6);
+}
+
+.cube48 {
+  left: calc(-90px - 93% );
+  top: calc(100% - 72px );
+  width: 72px;
+  height: 72px;
+  background-color: #ff449f;
+  -webkit-transform: rotate(-7deg);
+          transform: rotate(-7deg);
+  -webkit-animation: ani 11s infinite;
+          animation: ani 11s infinite;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+.cube48 .eye, .cube48 .mouth {
+  background-color: #44ffa3;
+}
+.cube48 .eye.eyeL {
+  height: 5%;
+  top: 30%;
+}
+.cube48 .mouth {
+  left: calc(50% + -15%);
+}
+.cube48:hover {
+  -webkit-transform: translate(0px, -5px) scale(0.6);
+          transform: translate(0px, -5px) scale(0.6);
+}
+
+.cube49 {
+  left: calc(-90px - 44% );
+  top: calc(27% - 78px );
+  width: 78px;
+  height: 78px;
+  background-color: #fdff44;
+  -webkit-transform: rotate(11deg);
+          transform: rotate(11deg);
+  -webkit-animation: ani 12s infinite;
+          animation: ani 12s infinite;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+.cube49 .eye, .cube49 .mouth {
+  background-color: #4644ff;
+}
+.cube49 .eye.eyeR {
+  height: 5%;
+  top: 30%;
+}
+.cube49 .eye.eyeL {
+  height: 5%;
+  top: 30%;
+}
+.cube49 .mouth {
+  left: calc(50% + 14%);
+}
+.cube49:hover {
+  -webkit-transform: translate(7px, 3px) scale(0.6);
+          transform: translate(7px, 3px) scale(0.6);
+}
+
+.cube50 {
+  left: calc(-90px - 45% );
+  top: calc(32% - 74px );
+  width: 74px;
+  height: 74px;
+  background-color: #fff;
+  -webkit-transform: rotate(-8deg);
+          transform: rotate(-8deg);
+  -webkit-animation: ani 13s infinite;
+          animation: ani 13s infinite;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+.cube50 .eye, .cube50 .mouth {
+  background-color: #4644ff;
+}
+.cube50 .eye.eyeL {
+  height: 5%;
+  top: 30%;
+}
+.cube50 .mouth {
+  left: calc(50% + 3%);
+}
+.cube50:hover {
+  -webkit-transform: translate(2px, 4px) scale(0.6);
+          transform: translate(2px, 4px) scale(0.6);
+}
+
+@-webkit-keyframes ani {
+  100% {
+    left: calc(100% + 50px);
+  }
+}
+
+@keyframes ani {
+  100% {
+    left: calc(100% + 50px);
+  }
+}

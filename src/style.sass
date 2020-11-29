@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap')
+$colorPink: #ff449f
+$colorBlue: #4644ff
+$colorGreen: #44ffa3
+$colorYellow: #fdff44
+$colorWhite: #fff
+
+*
+  // border: solid 1px black
+html, body
+  background-color: #333
+  margin: 0
+  width: 100%
+  height: 100%
+  overflow: hidden
+  position: fixed
+h1
+  margin: 0
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translate(-50%,-50%)
+  font-family: "Major Mono Display"
+  font-size: 18vw
+  // background: linear-gradient(90deg, #0056ff 0%,#40e0d0 33%,#ffa900 66%,#ff0080 100% )
+  background: linear-gradient(90deg, $colorBlue 8%,$colorGreen 40%,$colorYellow 60%,$colorPink 90% )
+
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+  text-shadow: 0px 0px 10px rgba(black, 0.1)
+  pointer-events: none
+.cube
+  margin: 10px
+  position: absolute
+  box-shadow: 0px 0px 10px rgba(black, 0.5)
+  transition: 0.5s
+  &:hover
+    cursor: pointer
+  
+.eye, .mouth
+  position: absolute
+  box-shadow: 0px 0px 8px rgba(black, 0.3)
+.eye
+  width: 10%
+  &.eyeR
+    height: 10%
+    top: 28%
+    left: 28%
+  &.eyeL
+    height: 10%
+    top: 28%
+    right: 28% 
+.mouth
+  width: 48%
+  height: 7%
+  transform: translate(-50%)
+  bottom: 30%
+  
+@mixin cubeMixin($size: 80px, $cubeColor: $colorPink, $faceColor: $colorYellow, $rotateDeg: 20deg, $mouthMove: 0%, $winkR: 0, $winkL: 0, $moveX:5px, $moveY:5px, $x:0%, $y:0%, $speed:10s)
+  // left: calc(100% - #{$size})
+  // top: calc(100% - #{$size})
+  left: calc(-90px - #{$x} )
+  top: calc(#{$y} - #{$size} )
+
+  width: $size
+  height: $size
+  background-color: $cubeColor
+
+  transform: rotate($rotateDeg)
+
+  animation: ani $speed infinite 
+  animation-timing-function: ease-in
+  .eye, .mouth
+    background-color: $faceColor
+  .eye
+    &.eyeR
+      @if $winkR == 1
+        height: 5%
+        top: 30%
+    &.eyeL
+      @if $winkL == 1
+        height: 5%
+        top: 30%
+  .mouth
+    left: calc(50% + #{$mouthMove})
+  &:hover
+    transform: translate($moveX, $moveY)  scale(0.6)
+    // transform: translateX(10px) 
+  
+
+$colors: ($colorPink, $colorBlue, $colorGreen, $colorYellow, $colorWhite)
+  
+@for $i from 1 through 50
+  $size: 25+random(60)
+  $cubeColor: nth($colors,random(5))
+  $faceColor: nth($colors,random(5))
+  @if $cubeColor==$faceColor
+    $faceColor: nth($colors,random(5))
+  @if $cubeColor==$colorYellow or $cubeColor==$colorWhite
+    $faceColor: nth($colors,random(2))
+
+  $rotateDeg: -20+random(40)
+  $mouthMove: percentage((-20+random(40)) /100)
+  $winkR: random(2)-1
+  $winkL: random(2)-1
+  $moveX: -10+random(20)
+  $moveY: -10+random(20)
+  $maxPos: calc(100% - #{$size}) 
+  // $x: percentage(random(100)/100)
+  $x: percentage(random(100)/100)
+  $y: percentage(random(100)/100)
+  $speed: 10+random(10)
+  
+  .cube#{$i}
+    +cubeMixin(#{$size}px, $cubeColor, $faceColor, #{$rotateDeg}deg, $mouthMove, $winkR, $winkL, #{$moveX}px, #{$moveY}px, $x, $y, #{$speed}s)
+  
+
+@keyframes ani
+  100%
+    left: calc(100% + 50px)
